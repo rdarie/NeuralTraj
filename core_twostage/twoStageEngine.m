@@ -103,4 +103,4 @@ function twoStageEngine(seqTrain, seqTest, fname, varargin)
   vars  = who;
   fprintf('Saving %s...\n', fname);
   save(fname, vars{~ismember(vars, {'X', 'Y', 'LL', 'estParams',... 
-  'seqTrain', 'seqTest', 'pcDirs', 'pcScores', 'res'})});
+  'seqTrain', 'seqTest', 'pcDirs', 'pcScores', 'res'})}, '-v7.3');

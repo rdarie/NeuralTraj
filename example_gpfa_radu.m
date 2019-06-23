@@ -34,7 +34,7 @@
 clear; clc;
 % load('mat_sample/sample_dat');
 % example_dat = dat;
-load('Z:\scratch/rdarie/Murdoc Neural Recordings/201901211000-Proprio/Trial003_trig_raster_short_for_gpfa.mat');
+load('Z:\scratch/rdarie/Murdoc Neural Recordings/201901271000-Proprio/201901271000-Proprio_trig_raster_long_for_gpfa.mat');
 % 
 % datFormat is set to 'spikes' for 0/1 spiking activity (see neuralTraj.m)
 datFormat = 'spikes';
@@ -57,13 +57,13 @@ xDim = 8;
 
 % If using a two-stage method ('fa', 'ppca', or 'pca'), select
 % standard deviation (in msec) of Gaussian smoothing kernel.
-kernSD = 30;
+kernSD = 50;
 % NOTE: The optimal kernel width should be found using 
 %       cross-validation (Section 2) below.
 
 segLength = 20;
 binWidth = 30;
-emMaxIters = 1000;
+emMaxIters = 500;
 % Extract neural trajectories
 result = neuralTraj(runIdx, dat, 'datFormat', datFormat, ...
     'method', method, 'xDims', xDim, 'kernSDList', kernSD, ...

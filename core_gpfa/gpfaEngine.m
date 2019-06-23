@@ -104,4 +104,4 @@ function gpfaEngine(seqTrain, seqTest, fname, varargin)
   if ~parallelize
       fprintf('Saving %s...\n', fname);
   end
-  save(fname, vars{~ismember(vars, {'yAll', 'blah'})});
+  save(fname, vars{~ismember(vars, {'yAll', 'blah'})}, '-v7.3');

@@ -72,5 +72,5 @@ end
 
 vars = who;
 fprintf('Saving %s...\n',fname);
-vars = vars(~ismember(vars,[{'extraOpts'},{'yAll'}]));
+vars = vars(~ismember(vars,[{'extraOpts'},{'yAll'}]), '-v7.3');
 save(fname,vars{:},'-append');
